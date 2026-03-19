@@ -167,11 +167,11 @@ C1 → C2 → [C3 || C4] → C5 → C6 → C7
 
 ## 八、提交物（统一格式）
 
-1. `experiment_result_<student_id>_<name>.md`（必须，内容结构见下）
+1. `lab1_report_<student_id>_<name>.md`（必须，内容结构见下）
 2. `calc.py`（或同等 Python 脚本，必须可运行）
 3. `data.csv`：元件表（便于批量读取）
 
-### experiment_result.md 格式要求
+### lab1_report_<student_id>_<name>.md 格式要求
 
 * 第 1 行：实验名称（必须是 Markdown 一级标题 `# ...`）
 * 第 2 行：学号、姓名（可多行/多名）
@@ -188,6 +188,7 @@ C1 → C2 → [C3 || C4] → C5 → C6 → C7
 * [ ] 独立核验（手算或 sanity check）
 * [ ] 薄弱环节与 1 条改进建议
 * [ ] AI 使用记录（如使用 AI）
+* [ ] 学生自定义补充区
 
 ---
 
