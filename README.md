@@ -84,7 +84,7 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 3. `data/components.csv`(如有修改，必须提交)
 4. `data/mission_profile.csv`(必须提交)
 5. `data/model.json`：RBD 结构如不同于description.md中的示例，也必须提交
-
+6. 一份转为 PDF 的报告（双面打印提交）
 ---
 
 ## 0. 重要说明与常见问题
