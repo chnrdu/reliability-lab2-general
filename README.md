@@ -1,7 +1,7 @@
 # 实验 1：完整搬运循环任务可靠度评估（RBD + 任务剖面）
 
 本仓库是**学生版**最简可复现模板：你需要补全 **任务剖面（mission profile）** 与 **RBD 结构（model.json）**，
-程序才能计算并生成 `output/experiment_result.md`。
+程序才能计算并生成 `output/lab1_report_<student_id>_<student_name>.md`。
 
 实验的完整描述见 `description.md`。
 
@@ -79,7 +79,7 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 
 ## 7. 提交物 (submissions)
 
-1. `experiment_result_<student_id>_<name>.md`（必须，要求见 `description.md` 的要求五）
+1. `lab1_report_<student_id>_<name>.md`（必须，要求见 `description.md` 的要求五）
 2. `calc.py`（或同等 Python 脚本，必须可运行）
 3. `data/components.csv`(如有修改，必须提交)
 4. `data/mission_profile.csv`(必须提交)
@@ -95,7 +95,7 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 - 在自定义区块说明你的个性化修改内容。
 
 ### 结果文件命名与归档
-- 程序自动生成结果文件，命名为：`experiment_result_{student_id}_{student_name}.md`，请勿手动更改。
+- 程序自动生成结果文件，命名为：`lab1_report_<student_id>_<student_name>.md`，请勿手动更改。
 - 所有结果自动归档到 output/ 目录，便于批量收集和自动化检查。
 
 ### 手动补充区块说明
@@ -118,7 +118,7 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 - 如需差异，请按要求个性化数据或参数，并在自定义区说明。
 
 ### 提交物清单
-- `experiment_result_{student_id}_{student_name}.md`（自动生成，含自定义补充区）
+- `lab1_report_<student_id>_<student_name>.md`（自动生成，含自定义补充区）
 - `calc.py`（如有修改需一并提交）
 - 数据文件（如有个性化修改需一并提交）
 
