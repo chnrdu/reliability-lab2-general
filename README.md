@@ -164,3 +164,10 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 - [VS Code 官方 Git 指南](https://code.visualstudio.com/docs/sourcecontrol/overview)
 
 以上资源适合初学者快速学习 Git 的基本操作和常用命令。
+
+---
+
+## 讲义资料（可修系统）
+
+- 中文讲义：`docs/repairable_markov_lecture_notes.md`
+- English notes: `docs/repairable_markov_lecture_notes_en.md`
