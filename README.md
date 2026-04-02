@@ -6,7 +6,7 @@
 - 一般网络系统的可靠性模型
 - 可修系统的可靠性与可用度模型
 
-实验的完整要求见 `description.md`。后续提交会继续补齐数据模板与计算脚本。
+实验的完整要求见 `description.md`。
 
 ---
 
@@ -24,11 +24,11 @@
 ### C) 保留任务剖面背景
 - 保留 Pick / Lift / TravelLoaded / Place / ReturnEmpty 五阶段机械系统背景
 - 任务剖面继续用于描述元件工作占空比和任务载荷特征
-- 后续计算将同时服务于一般网络模型和可修系统模型
+- 当前计算脚本同时输出一般网络可靠度和可修系统可用度
 ---
 
 ## 2. 一键运行
-当前仓库仍保留原始命令行入口。后续提交会将输出文件名和结果内容同步更新为 `lab2-general` 实验格式。
+当前仓库已支持 `lab2-general` 实验格式输出。
 
 在仓库根目录执行（示例,姓名使用拼音或英文）：
 
@@ -38,14 +38,17 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 
 - `--N`：循环次数（默认 60，需自行调整）
 - 单循环时长 `t_cyc` 来自 `data/mission_profile.csv` 的五阶段时长之和
-- 后续版本会扩展输出：一般网络可靠度、可修系统可用度及对比结果
+- 运行后生成：`output/lab2_general_report_<student_id>_<student_name>.md`
+- 输出包括：一般网络可靠度、可修系统稳态可用度、单元件表和 sanity checks
 
 ---
 
 ## 3. 输入数据
-- `data/components.csv`：元件参数，后续将扩展到失效率与维修参数
+- `data/components.csv`：元件参数，包含 `lambda_per_h` 和 `mu_per_h`
 - `data/mission_profile.csv`：阶段时长 + 元件工作标记（0/1）
-- `data/model.json`：系统结构模型，后续将从 RBD 扩展为一般网络描述
+- `data/model.json`：系统结构模型，包含 `network_model` 和 `repairable_model`
+- `network_model`：一般网络结构，采用 source 到 target 连通作为成功判据
+- `repairable_model`：可修系统分析口径，当前采用稳态可用度
 
 ---
 
@@ -75,7 +78,7 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 - 在自定义区块说明你的个性化修改内容。
 
 ### 结果文件命名与归档
-- 程序后续会自动生成结果文件，命名为：`lab2_general_report_<student_id>_<student_name>.md`，请勿手动更改。
+- 程序自动生成结果文件，命名为：`lab2_general_report_<student_id>_<student_name>.md`，请勿手动更改。
 - 所有结果自动归档到 output/ 目录，便于批量收集和自动化检查。
 
 ### 手动补充区块说明
