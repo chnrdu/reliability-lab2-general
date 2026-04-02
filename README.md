@@ -73,7 +73,7 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 ## 5. 提交物 (submissions)
 
 1. `lab2_general_report_<student_id>_<name>.md`（必须，要求见 `description.md`）
-2. `calc.py`（或同等 Python 脚本，必须可运行）
+2. `calc.py`（必须提交；可不修改，但必须可运行）
 3. `data/components.csv`（如有修改，必须提交）
 4. `data/mission_profile.csv`（必须提交）
 5. `data/model.json`（系统网络结构文件，必须提交）
@@ -131,7 +131,7 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 
 ### 提交物清单
 - `lab2_general_report_<student_id>_<student_name>.md`（自动生成，含自定义补充区）
-- `calc.py`（如有修改需一并提交）
+- `calc.py`（必须提交；如未修改，保持原样提交即可）
 - 数据文件（如有个性化修改需一并提交）
 
 ### 常见错误与解决方法
