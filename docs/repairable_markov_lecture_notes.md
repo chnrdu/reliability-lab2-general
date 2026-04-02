@@ -25,6 +25,7 @@
 - 系统稳态可用度： $A_{sys}$
 
 本实验默认口径：
+
 $$
 A_i=\frac{\mu_i}{\lambda_{eff,i}+\mu_i}
 $$
@@ -46,19 +47,25 @@ $$
 - $D\to U$： $\mu$
 
 稳态平衡方程：
+
 $$
 \pi_U\lambda=\pi_D\mu,\quad \pi_U+\pi_D=1
 $$
+
 解得：
+
 $$
 \pi_U=\frac{\mu}{\lambda+\mu}
 $$
+
 因此单元件稳态可用度：
+
 $$
 A=\frac{\mu}{\lambda+\mu}
 $$
 
 若考虑占空比修正：
+
 $$
 \lambda_{eff}=\lambda\cdot duty,\quad
 A=\frac{\mu}{\lambda_{eff}+\mu}
@@ -74,6 +81,7 @@ $$
 - $S_3=(D,D)$
 
 生成矩阵：
+
 $$
 Q=\begin{bmatrix}
 -(\lambda_1+\lambda_2) & \lambda_1 & \lambda_2 & 0\\
@@ -82,7 +90,9 @@ Q=\begin{bmatrix}
 0 & \mu_2 & \mu_1 & -(\mu_1+\mu_2)
 \end{bmatrix}
 $$
+
 稳态方程：
+
 $$
 \pi Q=0,\quad \sum_{k=0}^3\pi_k=1
 $$
@@ -99,16 +109,19 @@ $$
 ### 步骤 1：从任务剖面计算占空比
 
 对每个元件：
+
 $$
 duty_i=\frac{\text{该元件在各阶段工作时长之和}}{\text{单循环总时长}}
 $$
 
 ### 步骤 2：计算有效失效率
+
 $$
 \lambda_{eff,i}=\lambda_i\cdot duty_i
 $$
 
 ### 步骤 3：计算单元件稳态可用度
+
 $$
 A_i=\frac{\mu_i}{\lambda_{eff,i}+\mu_i}
 $$
@@ -128,11 +141,13 @@ $$
 - $\mu=0.25\ \mathrm{h}^{-1}$
 
 ### 1. 计算 $\lambda_{eff}$
+
 $$
 \lambda_{eff}=8.0\times10^{-5}\times0.35=2.8\times10^{-5}\ \mathrm{h}^{-1}
 $$
 
 ### 2. 计算稳态可用度
+
 $$
 A=\frac{0.25}{0.25+2.8\times10^{-5}}
 =\frac{0.25}{0.250028}
@@ -151,11 +166,14 @@ $$
 - 并联两元件： $A_3=0.9970,\ A_4=0.9960$
 
 并联块可用度：
+
 $$
 A_{34}=1-(1-A_3)(1-A_4)
 =1-(0.0030)(0.0040)=0.999988
 $$
+
 若系统为“ $A_1,A_2$ 串联后再串联并联块”：
+
 $$
 A_{sys}=A_1A_2A_{34}
 =0.9990\times0.9980\times0.999988

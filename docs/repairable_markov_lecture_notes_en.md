@@ -25,6 +25,7 @@ Use the following notation consistently:
 - System steady-state availability: $A_{sys}$
 
 Default lab convention:
+
 $$
 A_i=\frac{\mu_i}{\lambda_{eff,i}+\mu_i}
 $$
@@ -46,19 +47,25 @@ Transition rates:
 - $D\to U$: $\mu$
 
 Steady-state balance:
+
 $$
 \pi_U\lambda=\pi_D\mu,\quad \pi_U+\pi_D=1
 $$
+
 Hence:
+
 $$
 \pi_U=\frac{\mu}{\lambda+\mu}
 $$
+
 Therefore:
+
 $$
 A=\frac{\mu}{\lambda+\mu}
 $$
 
 With duty-cycle correction:
+
 $$
 \lambda_{eff}=\lambda\cdot duty,\quad
 A=\frac{\mu}{\lambda_{eff}+\mu}
@@ -74,6 +81,7 @@ Let both components be repairable. Define states:
 - $S_3=(D,D)$
 
 Generator matrix:
+
 $$
 Q=\begin{bmatrix}
 -(\lambda_1+\lambda_2) & \lambda_1 & \lambda_2 & 0\\
@@ -82,7 +90,9 @@ Q=\begin{bmatrix}
 0 & \mu_2 & \mu_1 & -(\mu_1+\mu_2)
 \end{bmatrix}
 $$
+
 Steady-state equations:
+
 $$
 \pi Q=0,\quad \sum_{k=0}^3\pi_k=1
 $$
@@ -99,16 +109,19 @@ Interpretation:
 ### Step 1: Compute duty cycle from mission profile
 
 For each component:
+
 $$
 duty_i=\frac{\text{total active time of component }i}{\text{total cycle time}}
 $$
 
 ### Step 2: Compute effective failure rate
+
 $$
 \lambda_{eff,i}=\lambda_i\cdot duty_i
 $$
 
 ### Step 3: Compute component availability
+
 $$
 A_i=\frac{\mu_i}{\lambda_{eff,i}+\mu_i}
 $$
@@ -128,11 +141,13 @@ Given a component:
 - $\mu=0.25\ \mathrm{h}^{-1}$
 
 ### 1. Compute $\lambda_{eff}$
+
 $$
 \lambda_{eff}=8.0\times10^{-5}\times0.35=2.8\times10^{-5}\ \mathrm{h}^{-1}
 $$
 
 ### 2. Compute steady-state availability
+
 $$
 A=\frac{0.25}{0.25+2.8\times10^{-5}}
 =\frac{0.25}{0.250028}
@@ -151,11 +166,14 @@ Assume:
 - Parallel components: $A_3=0.9970,\ A_4=0.9960$
 
 Parallel block:
+
 $$
 A_{34}=1-(1-A_3)(1-A_4)
 =1-(0.0030)(0.0040)=0.999988
 $$
+
 If system is " $A_1,A_2$ in series, then in series with the parallel block":
+
 $$
 A_{sys}=A_1A_2A_{34}
 =0.9990\times0.9980\times0.999988
