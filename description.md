@@ -211,6 +211,12 @@
    - `R_i(T) = exp(-lambda_eff * T)`
 4. 根据 `network_model` 计算系统任务可靠度 `R_sys(T)`
 
+最低核验要求：
+
+- 至少手算 1 个元件的 `R_i(T)`（写出代入过程）
+- 至少手算 1 条局部路径或局部子结构的可靠度
+- 将手算结果与脚本输出对比，并说明误差来源（如四舍五入）
+
 ### 任务 3：完成可修系统可用度计算
 
 你需要：
@@ -219,6 +225,11 @@
 2. 计算单元件稳态可用度
 3. 根据系统网络结构计算系统稳态可用度 `A_sys`
 4. 比较 `R_sys(T)` 与 `A_sys` 的差异，并解释原因
+
+口径要求：
+
+- 本实验默认使用 `A_i = mu / (lambda_eff + mu)`，对应 `repairable_model.use_effective_lambda = true`
+- 若你改为 `lambda` 口径，必须在报告中说明并解释差异
 
 ### 任务 4：完成结果解释与工程分析
 
@@ -255,7 +266,11 @@
 
 `A_i = mu / (lambda_eff + mu)`
 
-本仓库默认采用哪种口径，以 `data/model.json` 中 `repairable_model` 的配置为准。
+本仓库默认采用 `lambda_eff` 口径（`use_effective_lambda = true`）。
+
+示例（1 行）：
+
+- 若 `lambda_eff = 2.0e-5 1/h`，`mu = 0.5 1/h`，则 `A_i = 0.5 / (0.50002) ≈ 0.99996`
 
 ### 5. 系统层指标
 
