@@ -30,6 +30,16 @@
 ## 2. 一键运行
 当前仓库已支持 `lab2-general` 实验格式输出。
 
+### 环境准备（首次运行建议先执行）
+
+```bash
+python --version
+pip install -r requirements.txt
+```
+
+- 建议 Python 版本：`3.10+`
+- 若提示 `pip` 不可用，可改用 `python -m pip install -r requirements.txt`
+
 在仓库根目录执行（示例,姓名使用拼音或英文）：
 
 ```bash
@@ -78,6 +88,16 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 4. 任务4：结果解释与工程分析（必做，需写入报告自定义区）
 ---
 
+## 7. 从零到提交（建议流程）
+
+1. 完成环境准备并首次运行 `calc.py`
+2. 检查 `output/lab2_general_report_<student_id>_<student_name>.md` 是否成功生成
+3. 核对自动区块中的系统可靠度、系统可用度和 sanity checks
+4. 打开报告，在 `## 8. 学生自定义补充区` 填写任务1与任务4
+5. 导出报告 PDF
+6. 提交代码、数据文件、Markdown 报告和 PDF
+---
+
 ## 0. 重要说明与常见问题
 
 ### 参数与数据自定义
@@ -91,7 +111,8 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 
 ### 手动补充区块说明
 - 自动生成区块（参数、表格、网络结构摘要等）请勿手动修改，否则自动化检查时会被覆盖。
-- 请在报告的学生自定义补充区内补充任务1与任务4内容（建模思路、公式推导、结果解释、改进建议等）。
+- 仅填写报告中的 `## 8. 学生自定义补充区`。
+- 该区块内必须完成任务1与任务4（建模思路、公式推导、结果解释、改进建议等）。
 
 ### 批量自动运行与归档（教师/助教参考）
 - 可用脚本批量运行所有学生的 calc.py，并自动归档结果。
