@@ -368,13 +368,13 @@ def main() -> None:
     lines.append(f"> 报告生成时间：{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     lines.append("")
 
-    custom_block_title = "## 8. 学生自定义补充区（请在此区块内补充任务1/3内容，不会被自动覆盖）"
+    custom_block_title = "## 8. 学生自定义补充区（请在此区块内补充任务1/4内容，不会被自动覆盖）"
     custom_block = (
         f"{custom_block_title}\n\n"
         "### 任务1：一般网络建模与公式\n"
         "（请在此处补充你的建模思路、公式推导等）\n\n"
-        "### 任务3：工程解释与改进建议\n"
-        "（请在此处补充你的工程分析、薄弱环节解释、改进建议等）\n"
+        "### 任务4：结果解释与工程分析（必做）\n"
+        "（请在此处补充你的可靠度/可用度结果解释、薄弱环节分析、改进建议等）\n"
     )
     if out_path.exists():
         old = out_path.read_text(encoding="utf-8")
