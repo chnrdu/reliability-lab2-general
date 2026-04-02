@@ -155,7 +155,7 @@ $$
 A_{34}=1-(1-A_3)(1-A_4)
 =1-(0.0030)(0.0040)=0.999988
 $$
-If system is "$A_1,A_2$ in series, then in series with the parallel block":
+If system is " $A_1,A_2$ in series, then in series with the parallel block":
 $$
 A_{sys}=A_1A_2A_{34}
 =0.9990\times0.9980\times0.999988
@@ -176,7 +176,7 @@ $$
 
 1. Which component/path is weakest.
 2. Why it is weak (both parameter and topology reasons).
-3. At least one improvement action with expected direction ($A_{sys}$ increase).
+3. At least one improvement action with expected direction ( $A_{sys}$ increase).
 
 ---
 
