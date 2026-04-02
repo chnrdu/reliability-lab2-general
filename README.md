@@ -60,6 +60,12 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 - `network_model`：一般网络结构，采用 source 到 target 连通作为成功判据
 - `repairable_model`：可修系统分析口径，当前采用稳态可用度
 
+最小修改要求（学生版）：
+
+- `mission_profile.csv`：至少检查并确认阶段时长、0/1 标记和你的任务假设一致
+- `model.json`：必须确认 `source/target`、关键边和成功事件定义与报告一致
+- `components.csv`：可沿用模板；若修改参数，需在报告自定义区说明原因
+
 ---
 
 ## 4. 预期输出
@@ -138,6 +144,13 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 - 参数未填写或格式错误：请检查命令行参数和数据文件格式。
 - 结果文件被覆盖：请只在自定义补充区填写手动内容。
 - 自动化检查未通过：请检查网络结构、维修参数和任务剖面。
+
+常见报错与定位：
+
+- `JSONDecodeError`：`data/model.json` 语法错误（多逗号、缺引号等），先用 JSON 校验工具检查
+- `components.csv 缺少列`：检查表头是否保留 `id,name,lambda_per_h,mu_per_h`
+- `mission_profile.csv 缺少列`：检查是否包含 `phase,duration_h` 及全部元件列
+- `network_model 引用了未知元件`：检查 `model.json` 的 `edge.component` 是否都存在于 `components.csv`
 
 ---
 
