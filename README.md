@@ -104,7 +104,7 @@ python src/calc.py --student_id 2026XXXXXX --student_name zhangsan --N 60
 6. 提交代码、数据文件、Markdown 报告和 PDF
 ---
 
-## 0. 重要说明与常见问题
+## 8. 重要说明与常见问题
 
 ### 参数与数据自定义
 - 默认所有同学的数据文件（components.csv、mission_profile.csv、model.json）一致，结果也一致。
