@@ -137,6 +137,55 @@
 
 `repairable_model` 用于描述可修系统分析口径，当前采用稳态可用度模型。
 
+### 4. 机械部件到网络边的映射示例（建议参考）
+
+可按“部件承担的功能连接”来映射网络边，例如：
+
+- `C1 断路器`：`START -> PWR_IN`
+- `C6 PLC控制器`：`CTRL_CORE -> SAFETY_OK`
+- `C8 起升变频器`：`ACT_GATE -> HOIST_PATH`
+- `C12 小车变频器`：`ACT_GATE -> TROLLEY_PATH`
+- `C19 夹具执行器`：`POSITION_OK -> TASK_DONE`
+
+上面的例子表示：从电源、控制、执行到任务完成的功能链路。你可以在此基础上加入冗余边或桥接边，但必须保证含义清晰。
+
+### 5. `model.json` 字段规则（必须/可选）
+
+必须字段：
+
+- 顶层：`network_model`、`repairable_model`
+- `network_model`：`source`、`target`、`nodes`、`edges`
+- 每条 `edge`：`id`、`from`、`to`、`component`
+
+可选字段：
+
+- 顶层：`description`、`hints`、`model`
+- 每条 `edge`：`role`
+- `repairable_model`：`metric`、`component_repair_field`、`use_effective_lambda`、`notes`
+
+最小合法样例（仅用于说明格式）：
+
+```json
+{
+  "network_model": {
+    "source": "START",
+    "target": "TASK_DONE",
+    "nodes": ["START", "TASK_DONE"],
+    "edges": [
+      {
+        "id": "E1",
+        "from": "START",
+        "to": "TASK_DONE",
+        "component": "C1"
+      }
+    ]
+  },
+  "repairable_model": {
+    "use_effective_lambda": true
+  }
+}
+```
+
 ---
 
 ## 五、你需要完成的任务
